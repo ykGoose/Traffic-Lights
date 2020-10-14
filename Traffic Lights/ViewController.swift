@@ -26,7 +26,8 @@ class ViewController: UIViewController {
 
     }
 
-    @IBAction func buttonPressed() {
+
+    @IBAction func lightSwitchButtonPressed() {
         lightGreenView.alpha = 1
         lightSwitchButton.setTitle("NEXT", for: .normal)
     }
