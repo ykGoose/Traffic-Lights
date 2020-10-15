@@ -64,8 +64,7 @@
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="fufufu:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dbx-bi-Ctf"/>
-                                    <action selector="lightSwitchButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="MX1-CM-JGi"/>
+                                    <action selector="lightSwitchButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="LYm-lx-pLy"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -81,7 +80,7 @@
                     <connections>
                         <outlet property="lightGreenView" destination="ISi-SN-ISb" id="Auw-WC-ZSI"/>
                         <outlet property="lightRedView" destination="auK-hg-vfv" id="HoT-nJ-Pvr"/>
-                        <outlet property="lightSwitchButton" destination="4Fk-rA-dTs" id="dO6-qI-pjr"/>
+                        <outlet property="lightSwitchButton" destination="4Fk-rA-dTs" id="DdR-82-lM7"/>
                         <outlet property="lightYellowView" destination="pXc-4f-B3J" id="uIW-lP-6zg"/>
                     </connections>
                 </viewController>
