@@ -14,6 +14,7 @@ class TrafficLights: UIViewController {
     @IBOutlet var lightGreenView: UIView!
     @IBOutlet var lightSwitchButton: UIButton!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         lightRedView.alpha = 0.3
@@ -26,28 +27,29 @@ class TrafficLights: UIViewController {
 
     }
 
-
+    var lightColor = "Turn of"
+    
     @IBAction func lightSwitchButtonPressed() {
-        if lightSwitchButton.title(for: .normal) == "START" {
-        lightSwitchButton.setTitle("NEXT", for: .normal)
-            lightRedView.alpha = 1
-            return
-        }
-        if lightGreenView.alpha == 1 {
-            lightRedView.alpha = 1
-            lightGreenView.alpha = 0.3
-            return
-        }
-        if lightYellowView.alpha == 1 {
-            lightGreenView.alpha = 1
-            lightYellowView.alpha = 0.3
-            return
-        }
-        if lightRedView.alpha == 1 {
+
+        switch lightColor {
+        case "Red":
             lightYellowView.alpha = 1
             lightRedView.alpha = 0.3
-            return
+            lightColor = "Yellow"
+        case "Yellow":
+            lightGreenView.alpha = 1
+            lightYellowView.alpha = 0.3
+            lightColor = "Green"
+        case "Green":
+            lightRedView.alpha = 1
+            lightGreenView.alpha = 0.3
+            lightColor = "Red"
+        default:
+            lightSwitchButton.setTitle("NEXT", for: .normal)
+            lightRedView.alpha = 1
+            lightColor = "Red"
         }
+
     }
     
 }
