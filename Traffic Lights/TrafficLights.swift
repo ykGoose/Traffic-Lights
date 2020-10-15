@@ -9,12 +9,17 @@ import UIKit
 
 class TrafficLights: UIViewController {
     
+    // MARK: - IBOutlet
+    
     @IBOutlet var lightRedView: UIView!
     @IBOutlet var lightYellowView: UIView!
     @IBOutlet var lightGreenView: UIView!
     @IBOutlet var lightSwitchButton: UIButton!
     
+    // MARK: - Private Properties
+    private var lightColor = "Turn off"
     
+    // MARK: - Life Cycles Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         lightRedView.alpha = 0.3
@@ -24,11 +29,9 @@ class TrafficLights: UIViewController {
         lightGreenView.alpha = 0.3
         lightGreenView.layer.cornerRadius = 50
         lightSwitchButton.layer.cornerRadius = 10
-
     }
-
-    var lightColor = "Turn of"
     
+    // MARK: - IB Actions
     @IBAction func lightSwitchButtonPressed() {
 
         switch lightColor {
