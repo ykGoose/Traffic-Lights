@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class TrafficLights: UIViewController {
     
     @IBOutlet var lightRedView: UIView!
     @IBOutlet var lightYellowView: UIView!
@@ -28,8 +28,26 @@ class ViewController: UIViewController {
 
 
     @IBAction func lightSwitchButtonPressed() {
-        lightGreenView.alpha = 1
+        if lightSwitchButton.title(for: .normal) == "START" {
         lightSwitchButton.setTitle("NEXT", for: .normal)
+            lightRedView.alpha = 1
+            return
+        }
+        if lightGreenView.alpha == 1 {
+            lightRedView.alpha = 1
+            lightGreenView.alpha = 0.3
+            return
+        }
+        if lightYellowView.alpha == 1 {
+            lightGreenView.alpha = 1
+            lightYellowView.alpha = 0.3
+            return
+        }
+        if lightRedView.alpha == 1 {
+            lightYellowView.alpha = 1
+            lightRedView.alpha = 0.3
+            return
+        }
     }
     
 }
